@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart'; // Import HomeScreen
-import 'screens/notifications_screen.dart'; // Import NotificationsScreen
-import 'screens/profile_screen.dart'; // Import ProfileScreen
+import 'screens/home_folder/home_screen.dart'; // Import HomeScreen
+import 'screens/notifications_folder/notifications_screen.dart'; // Import NotificationsScreen
+import 'screens/profile_folder/profile_screen.dart'; // Import ProfileScreen
 
 class Home extends StatefulWidget {
   const Home({super.key});
