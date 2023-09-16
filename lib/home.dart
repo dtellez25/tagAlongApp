@@ -36,8 +36,10 @@ class _MyWidgetState extends State<Home> {
     return Scaffold(
         appBar: AppBar(
           title: const Text("Tag Along"),
+          backgroundColor: Colors.lightBlue,
         ),
         bottomNavigationBar: BottomNavigationBar(
+            backgroundColor: Colors.lightBlue,
             currentIndex: currentIndex,
             onTap: _onItemTapped,
             items: const [
