@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'screens/home_screen.dart'; // Import HomeScreen
+import 'screens/notifications_screen.dart'; // Import NotificationsScreen
+import 'screens/profile_screen.dart'; // Import ProfileScreen
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -11,18 +14,9 @@ class _MyWidgetState extends State<Home> {
   int currentIndex = 0;
 
   List<Widget> screens = [
-    Container(
-      color: Colors.red,
-      child: Text("Home Screen"),
-    ),
-    Container(
-      color: Colors.blue,
-      child: Text("Notifications Screen"),
-    ),
-    Container(
-      color: Colors.green,
-      child: Text("Profile Screen"),
-    ),
+    HomeScreen(),
+    NotificationsScreen(),
+    ProfileScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -34,21 +28,24 @@ class _MyWidgetState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("Tag Along"),
-          backgroundColor: Colors.lightBlue,
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-            backgroundColor: Colors.lightBlue,
-            currentIndex: currentIndex,
-            onTap: _onItemTapped,
-            items: const [
-              BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.notifications), label: "Notifications"),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.people), label: "Profile")
-            ]),
-        body: screens.elementAt(currentIndex));
+      appBar: AppBar(
+        title: const Text("Tag Along"),
+        backgroundColor: Colors.lightBlue,
+        centerTitle: true,
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.lightBlue,
+        selectedItemColor: Colors.white, // Set the icon color to white
+        currentIndex: currentIndex,
+        onTap: _onItemTapped,
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.notifications), label: "Notifications"),
+          BottomNavigationBarItem(icon: Icon(Icons.people), label: "Profile")
+        ],
+      ),
+      body: screens.elementAt(currentIndex),
+    );
   }
 }
