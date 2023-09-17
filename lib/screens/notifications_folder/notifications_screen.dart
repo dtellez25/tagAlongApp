@@ -30,13 +30,13 @@ class NotificationsScreen extends StatelessWidget {
 
   Widget listViewItem(int index) {
     return Container(
-      margin: EdgeInsets.only(left: 10),
+      margin: const EdgeInsets.only(left: 10),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
             child: Container(
-              margin: EdgeInsets.symmetric(horizontal: 13, vertical: 10),
+              margin: const EdgeInsets.symmetric(horizontal: 13, vertical: 10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
