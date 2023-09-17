@@ -83,7 +83,7 @@ class NotificationsScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold),
             children: const [
               TextSpan(
-                text: 'Notification Description',
+                text: 'Someone requested a ride together',
                 style: TextStyle(fontWeight: FontWeight.w400),
               )
             ]),

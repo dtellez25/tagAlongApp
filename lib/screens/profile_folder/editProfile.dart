@@ -5,8 +5,17 @@ class EditScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Edit Profile'), // Set your desired title here
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.of(context).pop(); // Navigate back to the previous screen
+          },
+        ),
+      ),
+      body: const Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Icon(
             Icons.person,
