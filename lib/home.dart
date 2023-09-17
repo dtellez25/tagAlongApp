@@ -14,9 +14,9 @@ class _MyWidgetState extends State<Home> {
   int currentIndex = 0;
 
   List<Widget> screens = [
-    HomeScreen(),
-    NotificationsScreen(),
-    ProfileScreen(),
+    const HomeScreen(),
+    const NotificationsScreen(),
+    const ProfileScreen(),
   ];
 
   void _onItemTapped(int index) {
